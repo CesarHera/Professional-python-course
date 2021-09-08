@@ -1,7 +1,7 @@
-def division_by(n: float):
-    assert type(n) == float, 'Float expected'
-    def divisor(m: float):
-        assert type(m) == float, 'Float expected'
+from typing import Callable
+
+def division_by(n: float) -> Callable[[float], float]:
+    def divisor(m: float) -> float:
         return m / n
     return divisor
 
