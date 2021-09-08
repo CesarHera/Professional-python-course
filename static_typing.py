@@ -16,7 +16,8 @@ def prime_detector(number: int) -> bool:
 
 def run():
     print('Welcome to the prime finder list :)')
-    print([i for i in range(0, 100) if prime_detector(i)])
+    range = int(input('Type the list limit: '))
+    print([i for i in range(0, range + 1) if prime_detector(i)])
 
 
 if __name__ == '__main__':
