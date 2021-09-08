@@ -2,18 +2,18 @@ def division_by(n):
     assert type(n) == float, 'Float expected'
     def divisor(m):
         assert type(m) == float, 'Float expected'
-        return str(m / n)
+        return m / n
     return divisor
 
 def run():
-    division_by_3 = division_by(3.0)
-    print(division_by_3(18.0))
+    print(division_by(3.0)(18.0))
+    assert division_by(3.0)(18.0) == 18.0 / 3.0, 'Test 1 failed'
 
-    division_by_3 = division_by(5.0)
-    print(division_by_3(100.0))
+    print(division_by(5.0)(100.0))
+    assert division_by(5.0)(100.0) == 100.0 / 5.0, 'Test 2 failed'
 
-    division_by_3 = division_by(18.0)
-    print(division_by_3(54.0))
+    print(division_by(18.0)(54.0))
+    assert division_by(18.0)(54.0) == 54.0 / 18.0, 'Test 3 failed'
 
 if __name__ == '__main__':
     run()
