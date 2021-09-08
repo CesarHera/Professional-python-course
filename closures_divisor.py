@@ -1,6 +1,6 @@
-def division_by(n):
+def division_by(n: float):
     assert type(n) == float, 'Float expected'
-    def divisor(m):
+    def divisor(m: float):
         assert type(m) == float, 'Float expected'
         return m / n
     return divisor
